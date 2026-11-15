@@ -32,5 +32,7 @@ def edit_student(request, id):
     return render(request, "edit_student.html", {"student": student})
     
 def delete_student(request, id):
-    student = get_object_or_404(student, id=id)
+    student = get_object_or_404(Student, id=id)
+    student.delete()
+    return redirect("student_list")
     

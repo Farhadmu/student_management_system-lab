@@ -31,7 +31,7 @@
                         <td>{{ student.name }}</td>
                         <td>{{ student.age }}</td>
                         <td>{{ student.dept }}</td>
-                        <td><a href="{% url 'edit_student' student.id%}">Edit</a> <a href="">Delete</a></td>
+                        <td><a href="{% url 'edit_student' student.id%}">Edit</a><a href="{% url 'delete_student' student.id %}">Delete</a></td>
                     </tr>
                     {% empty %}
                     <tr>
